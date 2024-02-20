@@ -46,6 +46,10 @@ button, a {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     height: 88px;
     display: flex;
@@ -73,22 +77,27 @@ button, a {
 .menu__item {
     margin-left: 24px;
     margin-bottom: 32px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
 .menu__item:first-child {
     margin-top: 25px;
 }
 
-.menu__item--active {
+.menu__item:hover {
     margin-left: 20px;
     color: rgb(126, 126, 130);
 }
 
-.menu__item--active::before {
-    content: url(./assets/highlight.svg);
-    position: relative;
-    left: -20px;
-    top: 13px;
+.menu__item:hover::before {
+    content: "";
+    background: url(./assets/highlight.svg) no-repeat;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 20px;
+    border-radius: 25%;
 }
 
 footer {
