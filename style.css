@@ -157,7 +157,7 @@ footer {
     margin-bottom: 32px;
 }
 
-.page-language__ru--active {
+.page-language__ru:active {
     color: rgb(126, 126, 130);
 }
 
