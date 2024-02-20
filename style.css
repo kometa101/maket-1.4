@@ -151,3 +151,18 @@ footer {
 .page-language__ru--active {
     color: rgb(126, 126, 130);
 }
+
+/* Эффекты */
+
+button {
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    filter: opacity(40%);
+    transition-duration: 0.2s;
+}
+
+button:active {
+    transform: scale(1.2);
+}
