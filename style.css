@@ -35,6 +35,7 @@ p {
 
 body {
     width: 320px;
+    box-shadow: 10px 0 20px 5px #838383;
 }
 
 button, a {
@@ -44,6 +45,11 @@ button, a {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+}
+
+.button-round {
+    width: 40px;
+    height: 40px;
 }
 
 a {
@@ -81,7 +87,7 @@ a {
     transition-timing-function: ease-out;
 }
 
-.menu__item:first-child {
+.menu__navigation {
     margin-top: 25px;
 }
 
@@ -105,11 +111,11 @@ footer {
 }
 
 .menu-buttons {
+    gap: 16px;
     display: flex;
 }
 
 .menu-buttons button {
-    margin-right: 16px;
     margin-bottom: 16px;
 }
 
@@ -118,24 +124,19 @@ footer {
 }
 
 .menu-buttons__call {
-    width: 40px;
-    height: 40px;
     background-image: url(./assets/call.svg);
 }
 
 .menu-buttons__chat {
-    width: 40px;
-    height: 40px;
     background-image: url(./assets/chat.svg);
 }
 
 .menu-buttons__profile {
-    width: 40px;
-    height: 40px;
     background-image: url(./assets/profile.svg);
 }
 
-.contacts p {
+.contacts a {
+    display: inline-block;
     margin-left: 24px;
 }
 
@@ -167,11 +168,22 @@ button {
     transition-duration: 0.2s;
 }
 
-button:hover {
-    filter: opacity(40%);
-    transition-duration: 0.2s;
+@media (hover:hover) {
+    button:hover {
+        filter: opacity(40%);
+    }
+
+    button:active {
+        transform: scale(1.2);
+    }
 }
 
-button:active {
-    transform: scale(1.2);
+@media (hover:none) {
+    button:active {
+        filter: opacity(40%);
+    }
+
+    button:active {
+        transform: scale(1.2);
+    }
 }
